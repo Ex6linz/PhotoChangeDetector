@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pan Card Tampering</title>
+  <!-- Link do pliku CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav>
+    <h5>Pan Card Tampering</h5>
+    <p>Made by Pianalytix</p>
+  </nav>
+
+  <div class="container">
+    <form action="/" method="post" enctype="multipart/form-data">
+      <label for="file_upload">Upload Pan Card Image:</label>
+      <input type="file" name="file_upload" id="file_upload" />
+
+      <button type="submit">Check</button>
+
+      <p id="file_name" class="file-info"></p>
+    </form>
+
+    <div class="result">
+      <h5>{{pred}}</h5>
+    </div>
+  </div>
+
+  <!-- Link do pliku JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
