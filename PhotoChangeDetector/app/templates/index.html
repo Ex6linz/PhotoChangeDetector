@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhotoChangeDetector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+  <nav>
+    <h5>Photo Change Detector</h5>
+  </nav>
+
+  <div class="container">
+    <form action="/" method="post" enctype="multipart/form-data">
+      <label for="original_file">Upload Original Image:</label>
+      <input type="file" name="original_file" id="original_file" />
+
+      <label for="file_upload">Upload Image to Compare:</label>
+      <input type="file" name="file_upload" id="file_upload" />
+
+      <button type="submit">Check</button>
+
+      <p id="file_name" class="file-info"></p>
+    </form>
+
+    <div class="result">
+      <h5>{{ pred }}</h5>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
